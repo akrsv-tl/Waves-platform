@@ -1,18 +1,30 @@
 @import "./graph/_graph"
+@import "./counts/counts"
 
 .main-block
   background-color: $bg-color
   padding: 0 10px
 
 .toggle-row
-  margin-bottom: 10px
+  display: flex
+  margin: 10px 0
 
 .toggle-row__btn
+  display: flex
+  justify-content: center
+  align-items: center
   width: 117px
   height: 42px
+  margin-right: 7px
   border: none
   border-radius: 4px
   outline: none
   background-color: $bg-panels-color
   font-size: 15px
   color: #8c8c8c
+  cursor: pointer
+
+.toggle-row__icon
+  width: 18px
+  height: 18px
+  margin-right: 5px

@@ -10,10 +10,21 @@
   box-sizing: border-box
 
 .header__item
+  display: flex
+  align-items: center
+  border-bottom: 2px solid transparent
   height: 70px
-  width: 95px
+  min-width: 95px
   margin-right: 40px
   list-style: none
-  line-height: 70px
   color: #d3d3d3
   font-size: 15px
+  cursor: pointer
+  &:hover
+    border-bottom: 2px solid $graph-hover-color
+    color: $graph-hover-color
+    fill: $graph-hover-color
+
+.header__icon
+  margin-right: 10px
+

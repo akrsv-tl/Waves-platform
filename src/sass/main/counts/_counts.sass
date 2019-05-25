@@ -1,0 +1,72 @@
+.counts
+  display: flex
+  justify-content: space-between
+
+.count__pin
+  position: absolute
+  right: calc(0 + 20px)
+
+.count
+  position: relative
+  width: 25%
+  min-height: 180px
+  padding: 20px
+  margin-right: 10px
+  margin-bottom: 10px
+  background-color: $bg-panels-color
+  font-size: 17px
+  color: #fff
+  cursor: pointer
+
+  &:hover
+    border-radius: 4px
+    box-shadow: 0 14px 24px 3px rgba(0, 0, 0, 0.35)
+  &:last-child
+    margin-right: 0
+
+.count__header
+  display: flex
+  align-items: center
+  margin-bottom: 15px
+
+.count__status
+  width: 52px
+  height: 17px
+  margin-left: 5px
+  line-height: 17px
+  border-radius: 2px
+  background-color: rgba(90, 129, 234, .2)
+  font-size: 9px
+  text-align: center
+  color: rgb(90, 129, 234)
+  text-transform: uppercase
+
+.count__body
+  display: flex
+  flex-direction: column
+  font-size: 24px
+  font-weight: 300
+  color: #fff
+  border-bottom: 2px dotted #424242
+
+.count__value
+  height: 20px
+  margin-top: 5px
+  margin-bottom: 12px
+  font-size: 15px
+  color: #8c8c8c
+
+.count__toggle-btn
+  height: 20px
+  margin-top: 17px
+  margin-right: 20px
+  background-color: transparent
+  border: none
+  outline: none
+  font-size: 15px
+  color: #8c8c8c
+
+.count__img
+  width: 30px
+  height: 30px
+  margin-right: 6px
