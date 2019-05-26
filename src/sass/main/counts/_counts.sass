@@ -1,6 +1,9 @@
 .counts
-  display: flex
-  justify-content: space-between
+  width: 100%
+  display: grid
+  grid-template-rows: 1fr 1fr
+  grid-template-columns: 1fr 1fr 1fr 1fr
+  grid-gap: .7vw
 
 .count__pin
   position: absolute
@@ -8,11 +11,8 @@
 
 .count
   position: relative
-  width: 25%
   min-height: 180px
   padding: 20px
-  margin-right: 10px
-  margin-bottom: 10px
   background-color: $bg-panels-color
   font-size: 17px
   color: #fff
@@ -53,6 +53,9 @@
   height: 20px
   margin-top: 5px
   margin-bottom: 12px
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
   font-size: 15px
   color: #8c8c8c
 
@@ -70,3 +73,9 @@
   width: 30px
   height: 30px
   margin-right: 6px
+
+.count__img--block
+  background-color: #fcb034
+  border-radius: 50%
+  line-height: 30px
+  text-align: center
