@@ -34,3 +34,36 @@
   &:hover
     border-radius: 4px
     background-color: rgb(90, 129, 234)
+
+.tooltip
+  position: relative
+  display: inline-block
+
+.tooltiptext
+  visibility: hidden
+  width: 153px
+  height: 60px
+  line-height: 25px
+  background-color: rgba(0, 0, 0, .5)
+  color: #fff
+  font-size: 13px
+  text-align: center
+  padding: 5px
+  border-radius: 6px
+  position: absolute
+  top: 55px
+  left: 0
+  z-index: 1
+
+.tooltip:hover .tooltiptext
+  visibility: visible
+
+.tooltip .tooltiptext::after
+  content: " "
+  position: absolute
+  bottom: 100%
+  left: 25px
+  margin-left: -5px
+  border-width: 5px
+  border-style: solid
+  border-color: transparent transparent rgba(0, 0, 0, .5) transparent

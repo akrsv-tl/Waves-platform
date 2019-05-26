@@ -12,7 +12,9 @@
 <div class="container">
   <nav class="menu">
     <div class="menu__up">
-      <div class="menu__avatar"></div>
+      <div >
+        <img src="./src/images/avatar.jpg" alt="avatar" class="menu__avatar">
+      </div>
       <div class="menu__items">
         <ul>
           <li class="menu__item">
@@ -33,7 +35,8 @@
               </g>
             </svg>
           </li>
-          <li class="menu__item">
+          <li class="menu__item tooltip" id="change-theme">
+            <span class="tooltiptext">Click me for change theme!</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
               <g fill="none" fill-rule="evenodd">
                 <path fill="none" d="M1 1h26v26H1z"/>
@@ -71,6 +74,7 @@
     </div>
   </nav>
   <div class="content">
+    <div class="toggle-menu" id="toggle-menu"></div>
     <header class="header">
       <ul class="header__items">
         <li class="header__item">
@@ -134,14 +138,14 @@
       <div class="graph">
         <div class="graph__header">
           <ul class="graph__items">
-            <li class="graph__item">Waves 3999</li>
-            <li class="graph__item">Bitcoin 2344</li>
-            <li class="graph__item"> Etherium 4234</li>
+            <li class="graph__item">Waves &#8226; $3999</li>
+            <li class="graph__item">Bitcoin &#8226; $2344</li>
+            <li class="graph__item">Etherium &#8226; $4234</li>
           </ul>
           <ul class="graph__periods">
-            <li class="graph__period">1D</li>
-            <li class="graph__period">1W</li>
-            <li class="graph__period">1M</li>
+            <li class="graph__period" id="day">1D</li>
+            <li class="graph__period graph__period--active" id="week">1W</li>
+            <li class="graph__period" id="month">1M</li>
           </ul>
         </div>
         <div class="graph__prices">
@@ -209,8 +213,14 @@
             <span class="count__value"></span>
           </div>
           <div class="count__toggle">
-            <button class="count__toggle-btn">Send</button>
-            <button class="count__toggle-btn">Receive</button>
+            <button class="count__toggle-btn">
+              <img src="./src/images/send.png" alt="send" class="toggle-row__icon">
+              Send
+            </button>
+            <button class="count__toggle-btn">
+              <img src="./src/images/deposit.png" alt="deposit" class="toggle-row__icon">
+              Receive
+            </button>
           </div>
         </div>
         <div class="count">
@@ -232,8 +242,14 @@
             <span class="count__value"></span>
           </div>
           <div class="count__toggle">
-            <button class="count__toggle-btn">Send</button>
-            <button class="count__toggle-btn">Receive</button>
+            <button class="count__toggle-btn">
+              <img src="./src/images/send.png" alt="send" class="toggle-row__icon">
+              Send
+            </button>
+            <button class="count__toggle-btn">
+              <img src="./src/images/deposit.png" alt="deposit" class="toggle-row__icon">
+              Receive
+            </button>
           </div>
         </div>
         <div class="count">
@@ -255,8 +271,14 @@
             <span class="count__value"></span>
           </div>
           <div class="count__toggle">
-            <button class="count__toggle-btn">Send</button>
-            <button class="count__toggle-btn">Receive</button>
+            <button class="count__toggle-btn">
+              <img src="./src/images/send.png" alt="send" class="toggle-row__icon">
+              Send
+            </button>
+            <button class="count__toggle-btn">
+              <img src="./src/images/deposit.png" alt="deposit" class="toggle-row__icon">
+              Receive
+            </button>
           </div>
         </div>
         <div class="count">
@@ -278,8 +300,14 @@
             <span class="count__value"></span>
           </div>
           <div class="count__toggle">
-            <button class="count__toggle-btn">Send</button>
-            <button class="count__toggle-btn">Receive</button>
+            <button class="count__toggle-btn">
+              <img src="./src/images/send.png" alt="send" class="toggle-row__icon">
+              Send
+            </button>
+            <button class="count__toggle-btn">
+              <img src="./src/images/deposit.png" alt="deposit" class="toggle-row__icon">
+              Receive
+            </button>
           </div>
         </div>
         <div class="count">
@@ -301,8 +329,14 @@
             <span class="count__value"></span>
           </div>
           <div class="count__toggle">
-            <button class="count__toggle-btn">Send</button>
-            <button class="count__toggle-btn">Receive</button>
+            <button class="count__toggle-btn">
+              <img src="./src/images/send.png" alt="send" class="toggle-row__icon">
+              Send
+            </button>
+            <button class="count__toggle-btn">
+              <img src="./src/images/deposit.png" alt="deposit" class="toggle-row__icon">
+              Receive
+            </button>
           </div>
         </div>
         <div class="count">
@@ -324,11 +358,21 @@
             <span class="count__value"></span>
           </div>
           <div class="count__toggle">
-            <button class="count__toggle-btn">Send</button>
-            <button class="count__toggle-btn">Receive</button>
+            <button class="count__toggle-btn">
+              <img src="./src/images/send.png" alt="send" class="toggle-row__icon">
+              Send
+            </button>
+            <button class="count__toggle-btn">
+              <img src="./src/images/deposit.png" alt="deposit" class="toggle-row__icon">
+              Receive
+            </button>
           </div>
         </div>
         <div class="count">
+          <div class="count__add">
+            <span class="add-v"></span>
+            <span class="add-h"></span>
+          </div>
         </div>
       </div>
     </main>
