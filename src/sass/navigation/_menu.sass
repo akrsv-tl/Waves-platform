@@ -1,8 +1,5 @@
 .menu
-  display: flex
-  flex-direction: column
-  justify-content: space-between
-  align-items: center
+  @include flexBox(space-between, center, column)
   padding: 15px
   width: 70px
   min-height: 100vh
@@ -11,9 +8,7 @@
   z-index: 1
 
 .menu__up
-  display: flex
-  flex-direction: column
-  align-items: center
+  @include flexBox(normal, center, column)
 
 .menu__avatar
   width: 40px
@@ -55,15 +50,15 @@
   left: 0
   z-index: 1
 
+  &::after
+    content: " "
+    position: absolute
+    bottom: 100%
+    left: 25px
+    margin-left: -5px
+    border-width: 5px
+    border-style: solid
+    border-color: transparent transparent rgba(0, 0, 0, .5) transparent
+
 .tooltip:hover .tooltiptext
   visibility: visible
-
-.tooltip .tooltiptext::after
-  content: " "
-  position: absolute
-  bottom: 100%
-  left: 25px
-  margin-left: -5px
-  border-width: 5px
-  border-style: solid
-  border-color: transparent transparent rgba(0, 0, 0, .5) transparent

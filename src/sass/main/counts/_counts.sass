@@ -25,8 +25,7 @@
     margin-right: 0
 
 .count__header
-  display: flex
-  align-items: center
+  @include flexBox(normal, center)
   margin-bottom: 15px
 
 .count__status
@@ -42,8 +41,7 @@
   text-transform: uppercase
 
 .count__body
-  display: flex
-  flex-direction: column
+  @include flexBox(normal, normal, column)
   font-size: 24px
   font-weight: 300
   color: #fff
@@ -57,7 +55,7 @@
   text-overflow: ellipsis
   white-space: nowrap
   font-size: 15px
-  color: #8c8c8c
+  color: $subTextColor
 
 .count__toggle-btn
   height: 20px
@@ -67,7 +65,11 @@
   border: none
   outline: none
   font-size: 15px
-  color: #8c8c8c
+  color: $subTextColor
+  &:hover,
+  &:hover .arrow-fill
+    color: #fff
+    fill: #fff
 
 .count__img
   width: 30px
@@ -83,11 +85,18 @@
 .count__add
   width: 30px
   height: 30px
+  position: relative
+
+.count--empty
+  @include flexBox(center, center)
+
+.add-h,
+.add-v
+  position: absolute
+  left: 50%
+  height: 30px
+  width: 3px
+  background-color: #424242
 
 .add-h
-  width: 3px
-  background-color: darkblue
-
-.add-v
-  width: 3px
-  background-color: darkblue
+   transform: rotate(90deg)

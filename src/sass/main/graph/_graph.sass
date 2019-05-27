@@ -6,17 +6,15 @@
   background-color: $bg-panels-color
 
 .graph__header
-  display: flex
-  justify-content: space-between
+  @include flexBox(space-between, normal)
   height: 60px
-  border-bottom: 1px solid #8c8c8c
+  border-bottom: 1px solid $subTextColor
 
 .graph__items
-  display: flex
-  justify-content: space-between
+  @include flexBox(space-between, normal)
   list-style: none
   font-size: 17px
-  color: #8c8c8c
+  color: $subTextColor
 
 .graph__item
   margin-right: 30px
@@ -26,12 +24,15 @@
     color: $graph-hover-color
     border-bottom: 1px solid $graph-hover-color
 
+.graph__item--active
+  color: $graph-hover-color
+  border-bottom: 1px solid $graph-hover-color
+
 .graph__periods
-  display: flex
-  justify-content: space-between
+  @include flexBox(space-between, normal)
   list-style: none
   font-size: 13px
-  color: #8c8c8c
+  color: $subTextColor
 
 .graph__period
   margin-right: 30px
@@ -46,16 +47,13 @@
   border-bottom: 1px solid $graph-hover-color
 
 .graph__prices
+  @include flexBox(center, center)
   margin-top: 30px
-  display: flex
-  align-items: center
-  justify-content: center
 
 .graph__price
+  @include flexBox(normal, normal, column)
   padding: 0 40px
   min-width: 150px
-  display: flex
-  flex-direction: column
   font-size: 28px
   font-weight: 300
   text-align: center
@@ -67,7 +65,7 @@
 
 .graph__subprice
   font-size: 13px
-  color: #8c8c8c
+  color: $subTextColor
   text-transform: uppercase
   margin-top: 5px
 
@@ -77,12 +75,14 @@
 .apexcharts-tooltip.light.active
   background: #353535 !important
   color: #fff
-  font-size: 9px
+  //font-size: 9px !important
   border-radius: 1px
   outline: none
   border: none
-  box-shadow: none
+  padding: 5px
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2)
 
 .apexcharts-tooltip-title
+  //font-size: 9px !important
   background: #353535 !important
   border-bottom: none !important

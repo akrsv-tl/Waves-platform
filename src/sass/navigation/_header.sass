@@ -3,14 +3,12 @@
   background-color: $bg-panels-color
 
 .header__items
-  display: flex
-  align-items: center
+  @include flexBox(normal, center)
   padding-left: 25px
   box-sizing: border-box
 
 .header__item
-  display: flex
-  align-items: center
+  @include flexBox(normal, center)
   border-bottom: 2px solid transparent
   height: 70px
   min-width: 95px
@@ -19,7 +17,8 @@
   color: #d3d3d3
   font-size: 15px
   cursor: pointer
-  &:hover
+  &:hover,
+  &:hover .path
     border-bottom: 2px solid $graph-hover-color
     color: $graph-hover-color
     fill: $graph-hover-color

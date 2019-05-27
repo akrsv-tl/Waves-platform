@@ -3,7 +3,6 @@ let menu = document.querySelector('.menu');
 let content = document.querySelector('.content');
 
 content.addEventListener('click', (e) => {
-  console.log(window);
   if(window.innerWidth < 880) {
     let menuBtnId = e.target.id;
     let hasClass = e.target.classList.contains('toggle-menu--active');

@@ -1,4 +1,4 @@
-@media (max-width: 720px)
+@media (max-width: $breakpoint)
   .menu
     margin-left: -70px
     transition: .6s
@@ -18,10 +18,7 @@
     padding: 0
 
   .header__item
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
+    @include flexBox(center, center, column)
     margin: 0
     font-size: 13px
 
@@ -32,25 +29,23 @@
     grid-template-columns: 1fr
 
   .graph
-    display: flex
-    flex-direction: column
+    @include flexBox(normal, normal, column)
 
   .graph__header
-    min-height: 160px
-    display: flex
-    flex-direction: column
+    @include flexBox(normal, normal, column)
+    min-height: 200px
 
   .graph__periods
     justify-content: space-around
 
   .graph__items
-    display: flex
+    @include flexBox(space-around, normal, column)
     flex-wrap: wrap
-    justify-content: space-around
 
   .graph__item,
   .graph__period
     margin: 0
+    text-align: center
 
   .graph__prices
     flex-direction: column
@@ -64,12 +59,12 @@
     &:last-child
       border-left: 0
 
-  #chart
-    width: 500px
-
-@media (min-width: 720px) and (max-width: 960px)
+@media (min-width: $breakpoint) and (max-width: 960px)
   .content
     width: 100%
+
+    .menu
+      display: flex
 
   .counts
     grid-template-columns: 1fr 1fr 1fr

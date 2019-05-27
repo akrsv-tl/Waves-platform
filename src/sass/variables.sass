@@ -1,4 +1,15 @@
 $bg-color: #212121
 $bg-panels-color: #2d2d2d
 $graph-hover-color: #5a81ea
-$breakpoint-mobile: 480px
+$breakpoint: 720px
+$subTextColor: #8c8c8c
+
+@mixin flexBox ($justify: space-between, $align: center, $direction: row)
+  display: flex
+  justify-content: $justify
+  align-items: $align
+  flex-direction: $direction
+
+@mixin font
+  font-size: $size
+
